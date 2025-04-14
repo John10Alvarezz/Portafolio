@@ -27,7 +27,7 @@ function initTypewriterEffect() {
     profileText.textContent = '';
 
     let i = 0;
-    const typeSpeed = 100; // milisegundos por caracter
+    const typeSpeed = 65; // milisegundos por caracter
 
     function typeWriter() {
         if (i < text.length) {
