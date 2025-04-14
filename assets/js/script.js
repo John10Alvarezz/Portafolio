@@ -17,3 +17,26 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
     alert('¡Gracias por tu mensaje! Te contactaré pronto.');
     this.reset();
 });
+
+initTypewriterEffect();
+
+// Efecto de escritura para el texto de perfil
+function initTypewriterEffect() {
+    const profileText = document.querySelector('.profile');
+    const text = profileText.textContent;
+    profileText.textContent = '';
+
+    let i = 0;
+    const typeSpeed = 100; // milisegundos por caracter
+
+    function typeWriter() {
+        if (i < text.length) {
+            profileText.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, typeSpeed);
+        }
+    }
+
+    // Pequeño retraso antes de iniciar la animación
+    setTimeout(typeWriter, 1000);
+}
