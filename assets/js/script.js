@@ -4,7 +4,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         // Se evita el comportamiento por defecto del enlace (navegar bruscamente)
         e.preventDefault();
-        // Se obtiene el ID del destino desde el atributo href (ej: "#servicios")
+        // Se obtiene el ID del destino desde el atributo href
         const targetId = this.getAttribute('href');
         // Se selecciona el elemento de destino usando ese ID
         const targetElement = document.querySelector(targetId);
