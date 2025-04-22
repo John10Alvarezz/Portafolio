@@ -17,11 +17,12 @@ body {
 
 /* Estilo del encabezado */
 header {
-    background-image: url('../img/code.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/code.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: rgb(0, 0, 0);
+    color: white;
+    /* Cambiado de rgb(0, 0, 0) a white para mejor contraste */
     text-align: center;
     padding: 60px 0;
 }
@@ -74,9 +75,51 @@ nav li a {
     transition: background-color 0.5s;
 }
 
+/* Estilo para el enlace activo */
+nav li a.active {
+    background-color: #11323b;
+    color: white;
+    font-weight: bold;
+}
+
 /* Estilo para los enlaces cuando se pasa el ratón */
 nav li a:hover {
     background-color: #11323b;
+}
+
+/* Estilos para celulares */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Menú horizontal */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+    display: none;
+    /* Oculto por defecto en desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* Barras del botón hamburguesa */
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Estilo para las secciones del contenido */
@@ -430,6 +473,7 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Estilos para los enlaces sociales */
 .social-link {
     display: inline-block;
     width: 40px;
@@ -443,42 +487,186 @@ footer {
     transition: background-color 0.3s;
 }
 
+/* Estilos para los enlaces sociales */
 .social-link:hover {
     background-color: #3498db;
 }
 
 /* Ajustes responsivos para móviles */
 @media (max-width: 768px) {
+
+    /* Hace visible el botón de menú hamburguesa en dispositivos móviles */
+    .menu-toggle {
+        display: block;
+        /* Mostrar en móviles */
+    }
+
+    /* Ajusta el contenedor de navegación para colocar el botón menú y el menú */
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    /* Configura el menú para que se muestre como un panel deslizable desde la izquierda */
+    .nav-menu {
+        margin: 0;
+        /* Elimina el margen automático en móviles */
+        justify-content: flex-start;
+        /* Alineación a la izquierda en móviles cuando el menú está desplegado */
+        position: fixed;
+        left: -100%;
+        /* Oculta el menú fuera de la pantalla por defecto */
+        top: 50px;
+        /* Posición desde arriba, debajo del header */
+        flex-direction: column;
+        /* Organiza los elementos del menú en columna */
+        background-color: #1e5b6d;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        /* Sombra para dar profundidad */
+        z-index: 5;
+        /* Asegura que el menú aparezca encima de otros elementos */
+    }
+
+    /* Cuando el menú está activo, lo muestra deslizándolo desde la izquierda */
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* Añade espacio vertical entre los elementos del menú */
+    nav li {
+        margin: 10px 0;
+    }
+
+    /* Transforma la primera barra del botón hamburguesa en diagonal cuando está activo */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    /* Oculta la barra central del botón hamburguesa cuando está activo */
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* Transforma la tercera barra del botón hamburguesa en diagonal cuando está activo */
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Elimina el contorno de enfoque en los enlaces del menú */
+    nav a:focus {
+        outline: none;
+    }
+
+    /* Cambia la disposición del contenido "sobre mí" de horizontal a vertical */
     .about-content {
         flex-direction: column;
         gap: 20px;
     }
 
+    /* Reposiciona la línea vertical de la línea de tiempo de experiencia */
     .timeline::after {
         left: 40px;
     }
 
+    /* Ajusta los elementos de la línea de tiempo para que ocupen todo el ancho */
     .timeline-item {
         width: 100%;
         padding-left: 80px;
         padding-right: 0;
     }
 
+    /* Reposiciona todos los elementos de la línea de tiempo a la derecha de la línea */
     .timeline-item:nth-child(even) {
         left: 0;
     }
 
+    /* Ajusta la posición de los puntos en la línea de tiempo */
     .timeline-dot {
         left: 30px;
     }
 
+    /* Asegura que los puntos de todos los elementos estén a la izquierda */
     .timeline-item:nth-child(odd) .timeline-dot {
         right: auto;
         left: 30px;
     }
 
+    /* Oculta los triángulos decorativos de los cuadros de contenido de la línea de tiempo */
     .timeline-item:nth-child(odd) .timeline-content::after,
     .timeline-item:nth-child(even) .timeline-content::after {
         display: none;
     }
+
+    /* Estilo para menú deslizable horizontal */
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        /* Evita que los elementos se envuelvan */
+        overflow-x: auto;
+        /* Permite deslizar horizontalmente */
+        -webkit-overflow-scrolling: touch;
+        /* Desplazamiento suave en iOS */
+        scrollbar-width: none;
+        /* Oculta la barra de desplazamiento en Firefox */
+        -ms-overflow-style: none;
+        /* Oculta la barra de desplazamiento en IE/Edge */
+        padding: 8px 0;
+    }
+}
+
+/* Para tablets */
+@media (max-width: 992px) {
+    .skills-container {
+        gap: 15px;
+    }
+
+    .skill-category {
+        min-width: 200px;
+    }
+
+    .project-card {
+        transform: none;
+    }
+}
+
+/* Para móviles pequeños */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .profile {
+        font-size: 1.1rem;
+    }
+
+    .contact-item {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* estilos de focus para mejorar la navegación*/
+nav a:focus {
+    outline: none;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+
+/* Estilos para la animación de secciones */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
 }

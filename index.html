@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descriçión de pagina -->
+    <meta name="description" content="Portfolio profesional de John Álvarez Cayuqueo, 
+    estudiante de Técnico en Informática especializado en desarrollo web.">
+    <!-- Palabras clave para SEO -->
+    <meta name="keywords" content="portfolio, desarrollo web, bases de datos, 
+    informática, John Álvarez">
     <title>Mi Portafolio Profesional</title>
     <!-- Enlace a los estilos CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -12,11 +18,11 @@
 </head>
 
 <body>
-    <!-- Encabezado-->
+    <!-- Encabezado principal con imagen y presentación personal-->
     <header>
         <div class="container">
             <!-- Foto de perfil-->
-            <img src="assets/img/yo.jpg" alt="Mi foto" class="profile-img">
+            <img src="assets/img/yo.jpg" alt="Fotografía profesional de John Álvarez Cayuqueo" class="profile-img">
             <h1>John Álvarez Cayuqueo</h1>
             <p class="profile">Estudiante Universitario de Técnico en Informática</p>
         </div>
@@ -24,213 +30,243 @@
 
     <!-- Barra de navegación -->
     <nav>
-        <ul>
-            <li><a href="https://teclab.uct.cl/~john.alvarez/">Inicio </a></li>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        <div class="container nav-container">
+            <!-- Botón de menú hamburguesa para dispositivos móviles -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <!-- Menú de navegación principal -->
+            <ul class="nav-menu">
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Sección sobre mi -->
-    <section id="sobre-mi">
-        <div class="container">
-            <h2>Sobre Mí</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>¡Hola! Soy John Álvarez, un apasionado de la Informática. Mi enfoque es combinar creatividad y
-                        funcionalidad
-                        para desarrollar soluciones digitales que realmente marquen la diferencia.</p>
-                    <p>Me especializo en Desarrollo Web y Bases de Datos, y disfruto trabajando en proyectos desafiantes
-                        que me permitan aprender y crecer profesionalmente. Mi objetivo es lograr ser un profesional
-                        destacado en mi area.</p>
-                    <p>Cuando no estoy frente a la computadora, me gusta hacer actividades al aire libre. Creo
-                        firmemente que estas actividades alimentan mi creatividad y me ayudan a mantener una perspectiva
-                        fresca en mi trabajo.</p>
+    <main>
+        <!-- Sección sobre mi -->
+        <section id="sobre-mi">
+            <div class="container">
+                <h2>Sobre Mí</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>¡Hola! Soy John Álvarez, un apasionado de la Informática. Mi enfoque es combinar creatividad
+                            y
+                            funcionalidad
+                            para desarrollar soluciones digitales que realmente marquen la diferencia.</p>
+                        <p>Me especializo en Desarrollo Web y Bases de Datos, y disfruto trabajando en proyectos
+                            desafiantes
+                            que me permitan aprender y crecer profesionalmente. Mi objetivo es lograr ser un profesional
+                            destacado en mi area.</p>
+                        <p>Cuando no estoy frente a la computadora, me gusta hacer actividades al aire libre. Creo
+                            firmemente que estas actividades alimentan mi creatividad y me ayudan a mantener una
+                            perspectiva
+                            fresca en mi trabajo.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección de mis habilidades -->
-    <section id="habilidades">
-        <div class="container">
-            <h2>Mis Habilidades</h2>
-            <div class="skills-container">
+        <!-- Sección de mis habilidades -->
+        <section id="habilidades">
+            <div class="container">
+                <h2>Mis Habilidades</h2>
+                <div class="skills-container">
 
-                <div class="skill-category">
-                    <h3>Desarrollo Web</h3>
-                    <ul>
-                        <li><i class="fa-brands fa-html5"></i> HTML/CSS</li>
-                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
-                        <li><i class="fa-brands fa-react"></i> React</li>
-                    </ul>
-                </div>
+                    <!-- Categoría: Desarrollo Web -->
+                    <div class="skill-category">
+                        <h3>Desarrollo Web</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-html5"></i> HTML/CSS</li>
+                            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                            <li><i class="fa-brands fa-react"></i> React</li>
+                        </ul>
+                    </div>
 
-                <div class="skill-category">
-                    <h3>Diseño</h3>
-                    <ul>
-                        <li><i class="fa-brands fa-figma"></i> Figma</li>
-                    </ul>
-                </div>
+                    <!-- Categoría: Diseño -->
+                    <div class="skill-category">
+                        <h3>Diseño</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-figma"></i> Figma</li>
+                        </ul>
+                    </div>
 
-                <div class="skill-category">
-                    <h3>Bases de Datos</h3>
-                    <ul>
-                        <li><i class="fa-solid fa-database"></i> MySQL</li>
-                        <li><i class="fa-solid fa-database"></i> MongoDB</li>
-                        <li><i class="fa-solid fa-database"></i> ObjectDB</li>
-                    </ul>
-                </div>
+                    <!-- Categoría: Bases de Datos -->
+                    <div class="skill-category">
+                        <h3>Bases de Datos</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-database"></i> MySQL</li>
+                            <li><i class="fa-solid fa-database"></i> MongoDB</li>
+                            <li><i class="fa-solid fa-database"></i> ObjectDB</li>
+                        </ul>
+                    </div>
 
-                <div class="skill-category">
-                    <h3>Otras Habilidades</h3>
-                    <ul>
-                        <li><i class="fab fa-github"></i> Git/GitHub</li>
-                        <li><i class="fas fa-project-diagram"></i> Metodologías Ágiles</li>
-                        <li><i class="fas fa-users"></i> Scrum</li>
-                        <li><i class="fas fa-tasks"></i> Gestión de Proyectos</li>
-                    </ul>
+                    <!-- Categoría: Otras habilidades complementarias -->
+                    <div class="skill-category">
+                        <h3>Otras Habilidades</h3>
+                        <ul>
+                            <li><i class="fab fa-github"></i> Git/GitHub</li>
+                            <li><i class="fas fa-project-diagram"></i> Metodologías Ágiles</li>
+                            <li><i class="fas fa-users"></i> Scrum</li>
+                            <li><i class="fas fa-tasks"></i> Gestión de Proyectos</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección de mis proyectos -->
-    <section id="proyectos">
-        <div class="container">
-            <h2>Proyectos Destacados</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="assets/img/Turismo Umbrella.jpg" alt="Proyecto 1" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Turismo Umbrella</h3>
-                        <p>Una página web diseñada para una empresa de turismo</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML5</span>
-                            <span class="project-tag">CSS3</span>
-                            <span class="project-tag">JavaScript</span>
+        <!-- Sección de mis proyectos con imágenes y enlaces -->
+        <section id="proyectos">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <div class="projects-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="project-card">
+                        <img src="assets/img/Turismo Umbrella.jpg"
+                            alt="Captura de pantalla del proyecto Turismo Umbrella" class="project-img">
+                        <div class="project-info">
+                            <h3 class="project-title">Turismo Umbrella</h3>
+                            <p>Una página web diseñada para una empresa de turismo</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5</span>
+                                <span class="project-tag">CSS3</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <a href="https://turismoumbrela.onrender.com/" class="project-link">Ver Proyecto</a>
                         </div>
-                        <a href="https://turismoumbrela.onrender.com/" class="project-link">Ver Proyecto</a>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <img src="assets/img/Pagina De Noticias.jpg" alt="Proyecto 2" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Noticias de Futbol</h3>
-                        <p>Una página web diseñada y enfocada en la información futbolística.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML5</span>
-                            <span class="project-tag">CSS3</span>
+                    <!-- Proyecto 2 -->
+                    <div class="project-card">
+                        <img src="assets/img/Pagina De Noticias.jpg"
+                            alt="Captura de pantalla del proyecto Noticias de futbol" class="project-img">
+                        <div class="project-info">
+                            <h3 class="project-title">Noticias de Futbol</h3>
+                            <p>Una página web diseñada y enfocada en la información futbolística.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5</span>
+                                <span class="project-tag">CSS3</span>
+                            </div>
+                            <a href="https://teclab.uct.cl/~john.alvarez/Semanas/Semana%202/pag_semana2.html"
+                                class="project-link">Ver Proyecto</a>
                         </div>
-                        <a href="http://127.0.0.1:5501/Index.html" class="project-link">Ver Proyecto</a>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <img src="assets/img/Pagina de futbol.jpg" alt="Proyecto 3" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Página de Futbol</h3>
-                        <p>Página enfocada en historias breves de futbol.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML5</span>
-                            <span class="project-tag">CSS3</span>
+                    <!-- Proyecto 3 -->
+                    <div class="project-card">
+                        <img src="assets/img/Pagina de futbol.jpg" alt="Captura de pantalla de la pagina de futbol"
+                            class="project-img">
+                        <div class="project-info">
+                            <h3 class="project-title">Página de Futbol</h3>
+                            <p>Página enfocada en historias breves de futbol.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5</span>
+                                <span class="project-tag">CSS3</span>
+                            </div>
+                            <a href="https://teclab.uct.cl/~john.alvarez/Semanas/Semana%201/Pagina_sem1.html"
+                                class="project-link">Ver Proyecto</a>
                         </div>
-                        <a href="#" class="project-link">Ver Proyecto</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección de mi experiencia -->
-    <section id="experiencia">
-        <div class="container">
-            <h2>Mi Experiencia</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Desarrollador Web</h3>
-                        <p class="timeline-date">2024 - Presente</p>
-                        <p>Empresa: Turismo Umbrella</p>
-                        <p>Responsabilidades y logros destacados durante esta posición. Proyectos importantes en los que
-                            participé y tecnologías utilizadas.</p>
+        <!-- Sección de experiencia laboral en formato línea de tiempo -->
+        <section id="experiencia">
+            <div class="container">
+                <h2>Mi Experiencia</h2>
+                <div class="timeline">
+                    <!-- Trabajo 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Desarrollador Web</h3>
+                            <p class="timeline-date">2024 - Presente</p>
+                            <p>Empresa: Turismo Umbrella</p>
+                            <p>Responsabilidades y logros destacados durante esta posición. Proyectos importantes en los
+                                que
+                                participé y tecnologías utilizadas.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Desarrollador de Aplicaciones Window Forms</h3>
-                        <p class="timeline-date">2024 - Actualidad</p>
-                        <p>Empresa: Clase de Programación con C#</p>
-                        <p>Responsabilidades y logros destacados durante esta posición. Proyectos importantes en los que
-                            participé y tecnologías utilizadas.</p>
+                    <!-- Trabajo 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Desarrollador de Aplicaciones Window Forms</h3>
+                            <p class="timeline-date">2024 - Actualidad</p>
+                            <p>Empresa: Clase de Programación con C#</p>
+                            <p>Responsabilidades y logros destacados durante esta posición. Proyectos importantes en los
+                                que
+                                participé y tecnologías utilizadas.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Encargado de Gestión de Bases de Datos</h3>
-                        <p class="timeline-date">2017 - Actualidad</p>
-                        <p>Empresa: Cabañas Anyely</p>
-                        <p>Responsabilidades y logros destacados durante esta posición. Proyectos importantes en los que
-                            participé y tecnologías utilizadas.</p>
+                    <!-- Trabajo 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Encargado de Gestión de Bases de Datos</h3>
+                            <p class="timeline-date">2017 - Actualidad</p>
+                            <p>Empresa: Cabañas Anyely</p>
+                            <p>Responsabilidades y logros destacados durante esta posición. Proyectos importantes en los
+                                que
+                                participé y tecnologías utilizadas.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- a -->
-    <!-- Sección de contacto -->
-    <section id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>jalvarez2023@alu.uct.cl</span>
+        </section>
+        <!-- Sección de contacto directo vía formulario -->
+        <section id="contacto">
+            <div class="container">
+                <h2>Contacto</h2>
+                <div class="contact-container">
+                    <!-- Información de contacto con íconos -->
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>jalvarez2023@alu.uct.cl</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+569 56827907</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Temuco, Chile</span>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+569 056827907</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Temuco, Chile</span>
-                    </div>
+                    <!-- Formulario de contacto para enviar mensajes -->
+                    <form class="contact-form" role="form" aria-label="Formulario de contacto">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit">Enviar Mensaje</button>
+                    </form>
                 </div>
-
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Asunto</label>
-                        <input type="text" id="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" required></textarea>
-                    </div>
-                    <button type="submit">Enviar Mensaje</button>
-                </form>
             </div>
-        </div>
-    </section>
-
-    <!-- Pie de página -->
+        </section>
+    </main>
+    <!-- Pie de página con redes sociales y derechos-->
     <footer>
         <div class="container">
             <div class="social-links">
@@ -242,7 +278,7 @@
         </div>
     </footer>
 
-    <!-- Enlace del archivo js -->
+    <!-- Enlace del archivo JavaScript para interactividad -->
     <script src="assets/js/script.js"></script>
 </body>
 
